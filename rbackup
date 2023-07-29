@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+#colors
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+blue='\033[0;34m'
+purple='\033[0;35m'
+cyan='\033[0;36m'
+white='\033[0;37m'
+nc='\033[0m'
+# PATH
+file_progress="/home/thorfinn/Desktop/backup.log"
+# colorprint
+print_color() {
+  local color=$1
+  local text=$2
+  local NC=$nc
+  printf "${color}%s${NC}\n" "${text}"
+}
+check_rsync() {
+  if [ $? -eq 0 ]; then
+    print_color "${green}" "[+]rsync is installed"
+  else
+    print_color "${red}" "[!]rsync is not installed"
+  fi
+}
+check_backup() {
+  if [ $? -eq 0 ]; then
+    notify-send "Backup completed"
+    print_color "${green}" "[+]Backup completed"
+  else
+    notify-send "Backup failed"
+    print_color "${red}" "[!]Backup failed"
+  fi
+}
+# check the arguments
+if [ "$#" -ne 2 ]; then
+  print_color "${red}" "Usage: $0 <source> <distenation file>"
+  exit 1
+fi
+
+# check the rsync if it is installed
+if ! command -v rsync &> /dev/null; then
+  print_color "${yellow}" "[!]rsync is not installed"
+  print_color "${yellow}" "[1] Arch?"
+  print_color "${yellow}" "[2] Ubuntu or debian?"
+  print_color "${yellow}" "[3] CentOS and Fedora"
+  print_color "${yellow}" "[4] No I don't want to install it"
+  print_color "${yellow}" "[?] choose your distro to install it: "
+  read -r -n 1 distro
+  case $distro in
+    1)
+      sudo pacman -Syu --noconfirm --needed rsync
+      check_rsync
+      ;;
+    2)
+      sudo apt install rsync
+      check_rsync
+      ;;
+    3)
+      sudo yum install rsync
+      check_rsync
+      ;;
+    4)
+      print_color "${purple}" "[!]ok"
+      exit 1
+      ;;
+  esac
+else
+  print_color "${green}" "[+]rsync is installed"
+fi
+
+current=$(date +%Y-%m-%d)
+destination="$2/current/$(basename "$1")"
+
+# Create the destination directory if it doesn't exist
+if [ ! -d "$destination" ]; then
+  mkdir -p "$destination"
+fi
+
+rs_options="-avb --backup-dir=$destination/$current --progress --delete"
+$(which rsync) $rs_options "$1" "$destination" > "$file_progress"
+check_backup
