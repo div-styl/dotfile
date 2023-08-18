@@ -54,7 +54,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      1px solid;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
@@ -76,7 +76,7 @@ mainbox {
     margin:                      0px;
     padding:                     20px;
     border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
+    border-radius:               12px 12px 12px 12px;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "inputbar", "message", "listview" ];
@@ -89,7 +89,7 @@ inputbar {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -99,14 +99,14 @@ inputbar {
 prompt {
     enabled:                     true;
     padding:                     8px 12px;
-    border-radius:               0px;
+    border-radius:               12px;
     background-color:            @selected;
     text-color:                  @background;
 }
 textbox-prompt-colon {
     enabled:                     true;
     padding:                     8px 11.5px;
-    border-radius:               0px;
+    border-radius:               12px;
     expand:                      false;
     str:                         "直";
     background-color:            @active;
@@ -116,7 +116,7 @@ entry {
     enabled:                     true;
     padding:                     8px 12px;
     border:                      0px 0px 1px 0px;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  inherit;
@@ -186,7 +186,7 @@ element {
     margin:                      0px;
     padding:                     8px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -250,7 +250,7 @@ mode-switcher{
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;

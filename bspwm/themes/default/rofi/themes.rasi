@@ -95,7 +95,7 @@ inputbar {
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -105,7 +105,7 @@ inputbar {
 prompt {
     enabled:                     true;
     padding:                     8px 12px;
-    border-radius:               0px;
+    border-radius:               12px;
     background-color:            @selected;
     text-color:                  @background;
 }

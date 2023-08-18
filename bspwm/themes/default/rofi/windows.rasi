@@ -59,8 +59,8 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      1px solid;
-    border-radius:               0px;
+    border:                      12px solid;
+    border-radius:               12px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
@@ -82,7 +82,7 @@ mainbox {
     margin:                      0px;
     padding:                     20px;
     border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
+    border-radius:               10px 10px 10px 10px;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "inputbar", "message", "listview" ];
@@ -95,7 +95,7 @@ inputbar {
     margin:                      0px;
     padding:                     0px 0px 8px 0px;
     border:                      0px 0px 1px 0px;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -166,7 +166,7 @@ listview {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;

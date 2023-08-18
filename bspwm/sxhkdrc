@@ -175,5 +175,7 @@ alt + {_,shift + }Tab
 # Switch to last opened workspace
 super + {Tab,grave}
 	bspc {node,desktop} -f last
-	
+# opening social apps
+super + shift + {d, s, t }
+  {discord, slack, telegram-desktop}
 ##---------- EOF ----------##
