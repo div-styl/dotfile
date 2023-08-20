@@ -176,6 +176,6 @@ alt + {_,shift + }Tab
 super + {Tab,grave}
 	bspc {node,desktop} -f last
 # opening social apps
-super + shift + {d, s, t }
-  {discord, slack, telegram-desktop}
+super + shift + {d, l, t, s}
+  {discord, slack, telegram-desktop, spotify}
 ##---------- EOF ----------##
