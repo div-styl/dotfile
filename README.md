@@ -1,5 +1,7 @@
 # Customizing Archcraft OS BSPWM Theme with dotfiles
 
+<span style="background-color: #red">*NOTE:*</span> The new changes of my dotfile would be in dir called `current`
+
 This repository contains my personal dotfiles for customizing the default theme of Archcraft OS with BSPWM window manager. The main focus of these dotfiles is to enhance the visual appeal of the OS using Picom for window styling. The customizations include transparent and blurred windows, as well as rounded corners for a sleek and modern look.
 ## BSPWM preview
 ![BSPWM preview](img/bspwm_preview.png)
