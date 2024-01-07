@@ -71,9 +71,10 @@ else
 fi
 
 current=$(date +%Y-%m-%d)
-destination="$2/current/$(basename "$1")"
 
-# Create the destination directory if it doesn't exist
+destination="$2/$(current)/$(basename "$1")"
+
+# Create the de)stination directory if it doesn't exist
 if [ ! -d "$destination" ]; then
   mkdir -p "$destination"
 fi

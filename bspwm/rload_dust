@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-killall dunst
-sleep 2
-notify-send "hey there" "hello"

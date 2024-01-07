@@ -6,7 +6,7 @@
 
 # bspwm directory
 DIR="$HOME/.config/bspwm"
-CONFIG="$DIR/alacritty/alacritty.yml"
+CONFIG="$DIR/alacritty/alacritty.toml"
 
 if [ "$1" == "--float" ]; then
 	alacritty --class 'alacritty-float,alacritty-float' --config-file "$CONFIG"

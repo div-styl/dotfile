@@ -34,7 +34,7 @@ super + {b,m,n,r,s,t,w,x}
 
 # Launch Apps
 super + shift + {f,w,e}
-	{thunar,firefox,geany}
+	{thunar,firefox-developer-edition,geany}
 
 # Terminal Apps
 ctrl + alt + {v,r,h}
@@ -109,7 +109,7 @@ ctrl + shift + {q,r}
 	bspc {quit,wm -r}
 	
 # Reload Keybindings
-super + Escape
+super + alt + Escape
 	pkill -USR1 -x sxhkd
 
 # Switch workspace
@@ -176,6 +176,8 @@ alt + {_,shift + }Tab
 super + {Tab,grave}
 	bspc {node,desktop} -f last
 # opening social apps
-super + shift + {d, l, t, s}
-  {discord, slack, telegram-desktop, spotify}
+super + shift + {d, t, s, c, o, r, b}
+  {discord, telegram-desktop, spotify, code, stremio, google-chrome-unstable, obsidian }
+
 ##---------- EOF ----------##
+
