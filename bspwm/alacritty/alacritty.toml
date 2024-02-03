@@ -18,9 +18,9 @@ dynamic_title = true
 opacity = 1.0
 startup_mode = "Windowed"
 
-# [scrolling]
-# history = 10000
-# multiplier = 3
+[scrolling]
+history = 10000
+multiplier = 3
 
 [window.dimensions]
 columns = 82
